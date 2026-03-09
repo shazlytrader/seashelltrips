@@ -8,7 +8,23 @@ const Tours = () => {
 
   return (
     <div className="pt-16">
-      <section className="section-padding">
+      <SEO
+        title="All Marsa Alam Tours & Excursions 2025 — Dolphins, Luxor, Safari | Seashell Trips"
+        description="Browse all Marsa Alam excursions: Luxor day trips, dolphin swimming, desert safari, island hopping & snorkeling. Best prices from £25. Book via WhatsApp!"
+        canonical="https://seashelltrips.com/tours"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Marsa Alam Tours & Excursions",
+          "numberOfItems": tours.length,
+          "itemListElement": tours.map((tour, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "url": `https://seashelltrips.com/tour/${tour.slug}`,
+            "name": tour.title
+          }))
+        }}
+      />
         <div className="container-tour">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4">
             {t("nav_tours")}
