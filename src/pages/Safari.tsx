@@ -18,7 +18,7 @@ const Safari = () => {
       />
       {/* Hero */}
       <div className="relative h-[40vh] min-h-[300px]">
-        <img src={safariImage} alt="Desert Safari" className="w-full h-full object-cover" />
+        <img src={safariImage} alt="Desert safari quad bike adventure at sunset near Marsa Alam, Egypt" className="w-full h-full object-cover" />
         <div className="absolute inset-0 gradient-hero" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div>
