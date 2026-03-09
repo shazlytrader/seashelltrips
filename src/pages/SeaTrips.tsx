@@ -11,9 +11,21 @@ const SeaTrips = () => {
   return (
     <div className="pt-16">
       <SEO
-        title="Marsa Alam Sea Trips — Swim With Dolphins, Snorkeling & Island Tours | Seashell Trips"
-        description="Book Marsa Alam sea trips: Dolphin House Samadai & Satayah, Marsa Mubarak turtles, Hamata Island & coral reef snorkeling. Equipment included. From £35!"
+        title="Marsa Alam Sea Trips — Swim With Dolphins, Snorkeling & Island Tours from £35 | Seashell Trips"
+        description="Book Marsa Alam sea trips: swim with dolphins at Samadai & Satayah, snorkel with turtles at Marsa Mubarak, explore Hamata Island. Equipment included!"
         canonical="https://seashelltrips.com/sea-trips"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Marsa Alam Sea Trips & Dolphin Tours",
+          "numberOfItems": seaTours.length,
+          "itemListElement": seaTours.map((tour, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "url": `https://seashelltrips.com/tour/${tour.slug}`,
+            "name": tour.title,
+          })),
+        }}
       />
       <section className="section-padding">
         <div className="container-tour">

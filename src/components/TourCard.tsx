@@ -13,14 +13,16 @@ const TourCard = ({ tour }: TourCardProps) => {
   const image = tourImages[tour.image];
 
   return (
-    <div className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border">
+    <article className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border">
       <Link to={`/tour/${tour.slug}`} className="block">
         <div className="relative h-56 overflow-hidden">
           <img
             src={image}
-            alt={tour.title}
+            alt={tour.altText}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             loading="lazy"
+            width="400"
+            height="224"
           />
           {tour.featured && (
             <div className="absolute top-3 left-3 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
@@ -62,7 +64,7 @@ const TourCard = ({ tour }: TourCardProps) => {
           </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
