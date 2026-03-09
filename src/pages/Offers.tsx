@@ -1,5 +1,6 @@
 import { Gift, MessageCircle } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import { specialOffers } from "@/lib/tours-data";
 
 const Offers = () => {
