@@ -40,7 +40,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Red Sea Marsa Alam" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="Red Sea coastline and coral reef near Marsa Alam, Egypt — best excursions and tours" className="w-full h-full object-cover" />
           <div className="absolute inset-0 gradient-hero" />
         </div>
         <div className="relative z-10 container-tour text-center text-primary-foreground">

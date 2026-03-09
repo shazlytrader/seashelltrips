@@ -12,9 +12,21 @@ const Safari = () => {
   return (
     <div className="pt-16">
       <SEO
-        title="Desert Safari Marsa Alam — Quad Bike, Camel Ride & Bedouin Dinner | Seashell Trips"
-        description="Experience Marsa Alam desert safari: quad biking from £27, Super Safari with camel ride & stargazing £37. Bedouin village visit & sunset included!"
+        title="Desert Safari Marsa Alam — Quad Bike, Camel Ride & Bedouin Dinner from £27 | Seashell Trips"
+        description="Book the best Marsa Alam desert safari: quad biking from £27, Super Safari with camel ride, Bedouin dinner & stargazing £37. Sunset in the Eastern Desert!"
         canonical="https://seashelltrips.com/safari"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Marsa Alam Safari Excursions",
+          "numberOfItems": safariTours.length,
+          "itemListElement": safariTours.map((tour, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "url": `https://seashelltrips.com/tour/${tour.slug}`,
+            "name": tour.title,
+          })),
+        }}
       />
       {/* Hero */}
       <div className="relative h-[40vh] min-h-[300px]">
