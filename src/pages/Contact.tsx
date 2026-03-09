@@ -15,6 +15,11 @@ const Contact = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Contact & Book — Marsa Alam Tours | Seashell Trips"
+        description="Contact Seashell Trips to book Marsa Alam excursions. WhatsApp +201017014296, email seashelltrips@gmail.com. Fast response within 30 minutes!"
+        canonical="https://seashelltrips.com/contact"
+      />
       <section className="section-padding">
         <div className="container-tour max-w-4xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4">{t("contact_title")}</h1>

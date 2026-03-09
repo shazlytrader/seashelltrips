@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MessageCircle, ArrowRight } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-redsea.jpg";
 import dolphinsImage from "@/assets/dolphins.jpg";
 import snorkelingImage from "@/assets/snorkeling.jpg";
