@@ -1,5 +1,6 @@
 import { BookOpen, MessageCircle, Check } from "lucide-react";
 import { useI18n, getEbookWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 
 const Ebook = () => {
   const { t } = useI18n();
