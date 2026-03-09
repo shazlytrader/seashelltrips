@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MessageCircle, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useI18n, getWhatsAppLink, WHATSAPP_NUMBER, EMAIL } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import { tours } from "@/lib/tours-data";
 
 const Contact = () => {

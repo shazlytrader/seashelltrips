@@ -8,6 +8,11 @@ const Offers = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Special Offers & Discounts — Marsa Alam Tours | Seashell Trips"
+        description="Save on Marsa Alam excursions! Family packages 15% off, early bird 10% discount, combo deals. Limited-time offers on dolphin tours & safari."
+        canonical="https://seashelltrips.com/offers"
+      />
       <section className="section-padding">
         <div className="container-tour">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4">
