@@ -5,6 +5,7 @@ import { getFeaturedTours, reviews, specialOffers } from "@/lib/tours-data";
 import { tourImages } from "@/lib/tour-images";
 import TourCard from "@/components/TourCard";
 import ReviewCard from "@/components/ReviewCard";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-redsea.jpg";
 
 const Index = () => {
