@@ -3,6 +3,7 @@ import { MessageCircle, ArrowLeft, Check, Camera } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
 import { getTourBySlug } from "@/lib/tours-data";
 import { tourImages } from "@/lib/tour-images";
+import SEO from "@/components/SEO";
 
 const TourDetail = () => {
   const { slug } = useParams<{ slug: string }>();
