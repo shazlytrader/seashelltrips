@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import { blogPosts } from "@/pages/Blog";
 
 const BlogPost = () => {
