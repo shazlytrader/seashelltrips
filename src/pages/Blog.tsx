@@ -69,6 +69,11 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="pt-16">
+      <SEO
+        title="Marsa Alam Travel Blog — Tips, Guides & Excursion Reviews | Seashell Trips"
+        description="Read expert travel guides for Marsa Alam: best things to do, dolphin swimming tips, top excursions & insider advice from local tour operators."
+        canonical="https://seashelltrips.com/blog"
+      />
       <section className="section-padding">
         <div className="container-tour">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4">
