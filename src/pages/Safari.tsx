@@ -11,6 +11,11 @@ const Safari = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Desert Safari Marsa Alam — Quad Bike, Camel Ride & Bedouin Dinner | Seashell Trips"
+        description="Experience Marsa Alam desert safari: quad biking from £27, Super Safari with camel ride & stargazing £37. Bedouin village visit & sunset included!"
+        canonical="https://seashelltrips.com/safari"
+      />
       {/* Hero */}
       <div className="relative h-[40vh] min-h-[300px]">
         <img src={safariImage} alt="Desert Safari" className="w-full h-full object-cover" />

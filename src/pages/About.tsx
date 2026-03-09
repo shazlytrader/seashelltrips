@@ -1,5 +1,6 @@
 import { Shield, Users, Award, MapPin, MessageCircle } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-redsea.jpg";
 
 const About = () => {

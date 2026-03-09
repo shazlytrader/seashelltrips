@@ -24,7 +24,7 @@ const Tours = () => {
             "name": tour.title
           }))
         }}
-      />
+      <section className="section-padding">
         <div className="container-tour">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-4">
             {t("nav_tours")}

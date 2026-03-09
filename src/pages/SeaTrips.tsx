@@ -10,7 +10,11 @@ const SeaTrips = () => {
 
   return (
     <div className="pt-16">
-      <section className="section-padding">
+      <SEO
+        title="Marsa Alam Sea Trips — Swim With Dolphins, Snorkeling & Island Tours | Seashell Trips"
+        description="Book Marsa Alam sea trips: Dolphin House Samadai & Satayah, Marsa Mubarak turtles, Hamata Island & coral reef snorkeling. Equipment included. From £35!"
+        canonical="https://seashelltrips.com/sea-trips"
+      />
         <div className="container-tour">
           <div className="text-center mb-12">
             <Waves className="h-12 w-12 text-primary mx-auto mb-4" />
