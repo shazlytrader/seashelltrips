@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { getToursByCategory } from "@/lib/tours-data";
 import TourCard from "@/components/TourCard";
+import SEO from "@/components/SEO";
 import { Mountain } from "lucide-react";
 import safariImage from "@/assets/safari-desert.jpg";
 
