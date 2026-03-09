@@ -1,11 +1,17 @@
 import { BookOpen, MessageCircle, Check } from "lucide-react";
 import { useI18n, getEbookWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 
 const Ebook = () => {
   const { t } = useI18n();
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Free Marsa Alam Travel Guide — Download E-Book | Seashell Trips"
+        description="Get your free Marsa Alam travel guide! Tips on best tours, beaches, restaurants & hidden gems. Delivered instantly via WhatsApp."
+        canonical="https://seashelltrips.com/ebook"
+      />
       <section className="section-padding">
         <div className="container-tour max-w-3xl text-center">
           <BookOpen className="h-16 w-16 text-primary mx-auto mb-6" />

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import { blogPosts } from "@/pages/Blog";
 
 const BlogPost = () => {
@@ -18,6 +19,19 @@ const BlogPost = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title={`${post.title} — Marsa Alam Guide | Seashell Trips`}
+        description={post.content[0]?.slice(0, 155) + "…"}
+        canonical={`https://seashelltrips.com/blog/${post.slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.content[0]?.slice(0, 155),
+          "author": { "@type": "Organization", "name": "Seashell Trips" },
+          "publisher": { "@type": "Organization", "name": "Seashell Trips", "url": "https://seashelltrips.com" }
+        }}
+      />
       <div className="relative h-[40vh] min-h-[300px]">
         <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 gradient-hero" />

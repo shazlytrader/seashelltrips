@@ -5,6 +5,7 @@ import { getFeaturedTours, reviews, specialOffers } from "@/lib/tours-data";
 import { tourImages } from "@/lib/tour-images";
 import TourCard from "@/components/TourCard";
 import ReviewCard from "@/components/ReviewCard";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-redsea.jpg";
 
 const Index = () => {
@@ -13,6 +14,24 @@ const Index = () => {
 
   return (
     <div>
+      <SEO
+        title="Seashell Trips — Best Marsa Alam Excursions, Dolphin Tours & Safari | Book Now"
+        description="Book the best Marsa Alam excursions: swim with dolphins, Luxor day trips, desert safari, snorkeling & airport transfers. Trusted local tour operator in Egypt's Red Sea. 10% discount!"
+        canonical="https://seashelltrips.com"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TravelAgency",
+          "name": "Seashell Trips",
+          "url": "https://seashelltrips.com",
+          "telephone": "+201017014296",
+          "email": "seashelltrips@gmail.com",
+          "address": { "@type": "PostalAddress", "addressLocality": "Marsa Alam", "addressCountry": "EG" },
+          "description": "Professional tourism company in Marsa Alam offering dolphin tours, Luxor excursions, desert safari, sea trips and airport transfers.",
+          "priceRange": "£25 - £100",
+          "areaServed": { "@type": "Place", "name": "Marsa Alam, Red Sea, Egypt" },
+          "sameAs": ["https://wa.me/201017014296"]
+        }}
+      />
       {/* Discount Banner */}
       <div className="bg-accent text-accent-foreground text-center py-2.5 text-sm font-semibold mt-16">
         {t("discount_banner")}

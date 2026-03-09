@@ -1,5 +1,6 @@
 import { MessageCircle, Plane, Check } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import transferImage from "@/assets/airport-transfer.jpg";
 
 const Transfers = () => {
@@ -7,6 +8,11 @@ const Transfers = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Marsa Alam Airport Transfer — Reliable Hotel Pickup from £25 | Seashell Trips"
+        description="Book Marsa Alam airport transfers: one way £25, round trip £45. Air-conditioned vehicles, 24/7 service, meet & greet. All hotels covered!"
+        canonical="https://seashelltrips.com/transfers"
+      />
       <div className="relative h-[40vh] min-h-[300px]">
         <img src={transferImage} alt="Airport Transfer" className="w-full h-full object-cover" />
         <div className="absolute inset-0 gradient-hero" />

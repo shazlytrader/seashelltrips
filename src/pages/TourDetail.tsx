@@ -3,6 +3,7 @@ import { MessageCircle, ArrowLeft, Check, Camera } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
 import { getTourBySlug } from "@/lib/tours-data";
 import { tourImages } from "@/lib/tour-images";
+import SEO from "@/components/SEO";
 
 const TourDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -22,6 +23,37 @@ const TourDetail = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title={`${tour.title} — Marsa Alam Excursion from ${tour.price} | Seashell Trips`}
+        description={`${tour.description.slice(0, 150)}… Book now via WhatsApp!`}
+        canonical={`https://seashelltrips.com/tour/${tour.slug}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": tour.title,
+          "description": tour.description,
+          "touristType": "Leisure",
+          "offers": tour.price.startsWith("Price") ? undefined : {
+            "@type": "Offer",
+            "price": tour.price.replace("£", ""),
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock"
+          },
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Seashell Trips",
+            "url": "https://seashelltrips.com"
+          },
+          "itinerary": {
+            "@type": "ItemList",
+            "itemListElement": tour.program.map((step, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "name": step
+            }))
+          }
+        }}
+      />
       {/* Hero */}
       <div className="relative h-[50vh] min-h-[400px]">
         <img src={image} alt={tour.title} className="w-full h-full object-cover" />

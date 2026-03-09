@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { getToursByCategory } from "@/lib/tours-data";
 import TourCard from "@/components/TourCard";
+import SEO from "@/components/SEO";
 import { Waves } from "lucide-react";
 
 const SeaTrips = () => {
@@ -9,6 +10,11 @@ const SeaTrips = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Marsa Alam Sea Trips — Swim With Dolphins, Snorkeling & Island Tours | Seashell Trips"
+        description="Book Marsa Alam sea trips: Dolphin House Samadai & Satayah, Marsa Mubarak turtles, Hamata Island & coral reef snorkeling. Equipment included. From £35!"
+        canonical="https://seashelltrips.com/sea-trips"
+      />
       <section className="section-padding">
         <div className="container-tour">
           <div className="text-center mb-12">

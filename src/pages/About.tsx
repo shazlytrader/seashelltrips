@@ -1,5 +1,6 @@
 import { Shield, Users, Award, MapPin, MessageCircle } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/hero-redsea.jpg";
 
 const About = () => {
@@ -14,6 +15,11 @@ const About = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="About Seashell Trips — Trusted Tour Operator in Marsa Alam, Egypt"
+        description="Seashell Trips: licensed Egyptologist guides, trusted local team in Marsa Alam. Private tours, sea trips, safari & transfers since day one."
+        canonical="https://seashelltrips.com/about"
+      />
       <div className="relative h-[40vh] min-h-[300px]">
         <img src={heroImage} alt="Marsa Alam" className="w-full h-full object-cover" />
         <div className="absolute inset-0 gradient-hero" />
