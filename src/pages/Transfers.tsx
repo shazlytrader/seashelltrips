@@ -1,5 +1,6 @@
 import { MessageCircle, Plane, Check } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
+import SEO from "@/components/SEO";
 import transferImage from "@/assets/airport-transfer.jpg";
 
 const Transfers = () => {
