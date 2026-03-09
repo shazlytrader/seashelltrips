@@ -14,6 +14,7 @@ const SeaTrips = () => {
         title="Marsa Alam Sea Trips — Swim With Dolphins, Snorkeling & Island Tours | Seashell Trips"
         description="Book Marsa Alam sea trips: Dolphin House Samadai & Satayah, Marsa Mubarak turtles, Hamata Island & coral reef snorkeling. Equipment included. From £35!"
         canonical="https://seashelltrips.com/sea-trips"
+      />
       <section className="section-padding">
         <div className="container-tour">
           <div className="text-center mb-12">
