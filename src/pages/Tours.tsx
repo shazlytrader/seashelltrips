@@ -1,6 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { tours } from "@/lib/tours-data";
 import TourCard from "@/components/TourCard";
+import SEO from "@/components/SEO";
 
 const Tours = () => {
   const { t } = useI18n();
