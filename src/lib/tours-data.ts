@@ -1,3 +1,8 @@
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Tour {
   id: string;
   slug: string;
@@ -6,11 +11,14 @@ export interface Tour {
   shortDesc: string;
   description: string;
   image: string;
+  altText: string;
   price: string;
   priceNote?: string;
   highlights: string[];
   program: string[];
   featured?: boolean;
+  faqs?: FAQ[];
+  relatedSlugs?: string[];
 }
 
 export const tours: Tour[] = [
