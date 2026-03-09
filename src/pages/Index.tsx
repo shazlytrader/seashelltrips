@@ -115,8 +115,16 @@ const Index = () => {
               to="/tours"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
             >
-              View All Tours →
+              View All Marsa Alam Tours →
             </Link>
+          </div>
+
+          {/* Internal cross-links for SEO */}
+          <div className="mt-8 text-center text-sm text-muted-foreground space-x-4">
+            <Link to="/sea-trips" className="text-primary hover:underline">🐬 Dolphin Tours</Link>
+            <Link to="/safari" className="text-primary hover:underline">🏜️ Safari Adventures</Link>
+            <Link to="/blog/swim-with-dolphins-marsa-alam" className="text-primary hover:underline">📖 Dolphin Guide</Link>
+            <Link to="/blog/marsa-alam-travel-guide" className="text-primary hover:underline">📖 Travel Guide</Link>
           </div>
         </div>
       </section>
