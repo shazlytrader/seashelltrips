@@ -199,7 +199,7 @@ const TourDetail = () => {
         </div>
       </div>
 
-      <RelatedTours tours={related.map(t => ({ ...t, shortDesc: t.short_desc, altText: t.alt_text, priceNote: t.price_note }))} />
+      <RelatedTours tours={related} />
     </div>
   );
 };
