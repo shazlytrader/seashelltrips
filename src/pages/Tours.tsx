@@ -1,10 +1,11 @@
 import { useI18n } from "@/lib/i18n";
-import { tours } from "@/lib/tours-data";
+import { useTours } from "@/hooks/useContent";
 import TourCard from "@/components/TourCard";
 import SEO from "@/components/SEO";
 
 const Tours = () => {
   const { t } = useI18n();
+  const { data: tours = [], isLoading } = useTours();
 
   return (
     <div className="pt-16">
@@ -33,11 +34,13 @@ const Tours = () => {
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             Explore all our tours and excursions from Marsa Alam. From ancient temples to underwater adventures.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tours.map(tour => (
-              <TourCard key={tour.id} tour={tour} />
-            ))}
-          </div>
+          {isLoading ? (
+            <p className="text-center text-muted-foreground">Loading tours...</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {tours.map(tour => <TourCard key={tour.id} tour={tour} />)}
+            </div>
+          )}
         </div>
       </section>
     </div>
