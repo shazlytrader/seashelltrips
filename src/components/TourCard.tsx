@@ -1,16 +1,32 @@
 import { Link } from "react-router-dom";
 import { MessageCircle, Star } from "lucide-react";
 import { useI18n, getWhatsAppLink } from "@/lib/i18n";
-import type { Tour } from "@/lib/tours-data";
 import { tourImages } from "@/lib/tour-images";
 
 interface TourCardProps {
-  tour: Tour;
+  tour: {
+    id?: string;
+    slug: string;
+    title: string;
+    short_desc?: string;
+    shortDesc?: string;
+    description?: string;
+    image: string;
+    alt_text?: string;
+    altText?: string;
+    price: string;
+    price_note?: string;
+    priceNote?: string;
+    featured?: boolean;
+  };
 }
 
 const TourCard = ({ tour }: TourCardProps) => {
   const { t } = useI18n();
-  const image = tourImages[tour.image];
+  const image = tourImages[tour.image] || tour.image;
+  const shortDesc = tour.short_desc || tour.shortDesc || "";
+  const altText = tour.alt_text || tour.altText || tour.title;
+  const priceNote = tour.price_note || tour.priceNote;
 
   return (
     <article className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border">
@@ -18,7 +34,7 @@ const TourCard = ({ tour }: TourCardProps) => {
         <div className="relative h-56 overflow-hidden">
           <img
             src={image}
-            alt={tour.altText}
+            alt={altText}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             loading="lazy"
             width="400"
@@ -41,9 +57,9 @@ const TourCard = ({ tour }: TourCardProps) => {
             {tour.title}
           </h3>
         </Link>
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{tour.shortDesc}</p>
-        {tour.priceNote && (
-          <p className="text-xs text-muted-foreground mb-3">{tour.priceNote}</p>
+        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{shortDesc}</p>
+        {priceNote && (
+          <p className="text-xs text-muted-foreground mb-3">{priceNote}</p>
         )}
 
         <div className="flex gap-2">

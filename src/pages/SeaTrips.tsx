@@ -1,12 +1,12 @@
 import { useI18n } from "@/lib/i18n";
-import { getToursByCategory } from "@/lib/tours-data";
+import { useToursByCategory } from "@/hooks/useContent";
 import TourCard from "@/components/TourCard";
 import SEO from "@/components/SEO";
 import { Waves } from "lucide-react";
 
 const SeaTrips = () => {
   const { t } = useI18n();
-  const seaTours = getToursByCategory("sea");
+  const { data: seaTours = [], isLoading } = useToursByCategory("sea");
 
   return (
     <div className="pt-16">
@@ -39,11 +39,13 @@ const SeaTrips = () => {
               🤿 {t("snorkel_note")}
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {seaTours.map(tour => (
-              <TourCard key={tour.id} tour={tour} />
-            ))}
-          </div>
+          {isLoading ? (
+            <p className="text-center text-muted-foreground">Loading...</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {seaTours.map(tour => <TourCard key={tour.id} tour={tour} />)}
+            </div>
+          )}
         </div>
       </section>
     </div>
